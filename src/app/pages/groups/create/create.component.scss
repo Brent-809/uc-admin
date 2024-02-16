@@ -1,0 +1,12 @@
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+}
+
+.dropzone-area {
+  /* Apply specific styles here to identify the Dropzone area */
+  /* For example, set a background color or border to see its boundaries */
+  background-color: #f7f7f7;
+  border: 2px solid #ddd;
+  min-height: 200px; /* Set a minimum height to make sure it's visible */
+}

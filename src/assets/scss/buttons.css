@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+  }
+
+  .responsive-row {
+    @apply w-full bg-white h-3/5 border resize-x overflow-hidden rounded-md;
+  }
+
+  /* primary button */
+  .btn-c {
+    @apply p-0.5 text-white rounded;
+  }
+
+  /* Button Items box */
+  .btn-c-primary {
+    @apply bg-sky-500 p-0.5 text-white rounded hover:bg-sky-600;
+  }
+
+  .btn-c-danger {
+    @apply bg-red-600 p-0.5 text-white rounded hover:bg-red-700;
+  }
+
+  .btn-c-success {
+    @apply bg-green-700 p-0.5 text-white rounded hover:bg-green-800;
+  }
+
+  .btn-c-info {
+    @apply bg-teal-200 p-0.5 text-black rounded hover:bg-teal-300;
+  }
+
+  .btn-c-warning {
+    @apply bg-yellow-400 p-0.5 text-black rounded hover:bg-yellow-500;
+  }
+
+  .btn-c-dark {
+    @apply bg-black p-0.5 text-white rounded hover:bg-neutral-800;
+  }
+
+
+  /* Button Items Rounded */
+  .btn-c-r-primary {
+    @apply bg-sky-500 p-0.5 text-white rounded-full hover:bg-sky-600;
+  }
+
+  .btn-c-r-danger {
+    @apply bg-red-600 p-0.5 text-white rounded-full hover:bg-red-700;
+  }
+
+  .btn-c-r-success {
+    @apply bg-green-700 p-0.5 text-white rounded-full hover:bg-green-800;
+  }
+
+  .btn-c-r-info {
+    @apply bg-teal-200 p-0.5 text-black rounded-full hover:bg-teal-300;
+  }
+
+  .btn-c-r-warning {
+    @apply bg-yellow-400 p-0.5 text-black rounded-full hover:bg-yellow-500;
+  }
+
+  .btn-c-r-dark {
+    @apply bg-black p-0.5 text-white rounded-full hover:bg-neutral-800;
+  }
+
+  /* Button Items Outline */
+  .btn-c-o-primary {
+    @apply border-solid border border-sky-500 p-0.5 text-black rounded-full hover:bg-sky-500 hover:text-white focus:bg-sky-500 focus:text-white;
+  }
+
+  .btn-c-o-danger {
+    @apply border-solid border border-red-600 p-0.5 text-black rounded-full hover:bg-red-600 hover:text-white focus:bg-red-600 focus:text-white;
+  }
+
+  .btn-c-o-success {
+    @apply border-solid border border-green-700 p-0.5 text-black rounded-full hover:bg-green-700 hover:text-white focus:text-white focus:bg-green-700;
+  }
+
+  .btn-c-o-info {
+    @apply border-solid border border-teal-200 p-0.5 text-black rounded-full hover:bg-teal-200 focus:bg-teal-200;
+  }
+
+  .btn-c-o-warning {
+    @apply border-solid border border-yellow-400 p-0.5 text-black rounded-full hover:bg-yellow-400 focus:bg-yellow-400;
+  }
+
+  .btn-c-o-dark {
+    @apply border-solid border border-black p-0.5 text-black rounded-full hover:bg-black hover:text-white focus:bg-black focus:text-white;
+  }
+
+  /* Button Items Outline Background Transparent*/
+  .btn-c-o-t-primary {
+    @apply border-solid border border-sky-500 bg-sky-300 bg-opacity-10 p-0.5 text-black rounded-full hover:bg-sky-500 hover:text-white focus:bg-sky-500 focus:text-white;
+  }
+
+  .btn-c-o-t-danger {
+    @apply border-solid border border-red-600 bg-red-600 bg-opacity-10 p-0.5 text-black rounded-full hover:bg-red-600 hover:text-white focus:bg-red-600 focus:text-white;
+  }
+
+  .btn-c-o-t-success {
+    @apply border-solid border border-green-700 bg-green-700 bg-opacity-10 p-0.5 text-black rounded-full hover:bg-green-700 hover:text-white focus:text-white focus:bg-green-700;
+  }
+
+  .btn-c-o-t-info {
+    @apply border-solid border border-teal-200 bg-teal-200 bg-opacity-10 p-0.5 text-black rounded-full hover:bg-teal-200 focus:bg-teal-200;
+  }
+
+  .btn-c-o-t-warning {
+    @apply border-solid border border-yellow-400 bg-yellow-400 bg-opacity-10 p-0.5 text-black rounded-full hover:bg-yellow-400 focus:bg-yellow-400;
+  }
+
+  .btn-c-o-t-dark {
+    @apply border-solid border border-black bg-black bg-opacity-5 p-0.5 text-black rounded-full hover:bg-black hover:text-white focus:bg-black focus:text-white;
+  }
+
+
+
+  /* Button Size */
+  .btn-c-s1 {
+    @apply text-xs font-semibold px-3 py-1;
+  }
+
+  .btn-c-s2 {
+    @apply text-sm font-semibold px-4 py-0.5;
+  }
+
+  .btn-c-s3 {
+    @apply text-sm font-semibold px-6 py-1;
+  }
+
+  .btn-c-s4 {
+    @apply text-sm font-semibold px-6 py-2;
+  }
+
+  .btn-c-s5 {
+    @apply text-sm font-semibold px-6 py-3;
+  }
+}

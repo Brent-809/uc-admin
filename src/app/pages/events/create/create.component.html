@@ -1,0 +1,109 @@
+<form [formGroup]="CreateEventForm" (submit)="onSubmit()">
+  <div class="relative z-0 w-full mb-6 group">
+    <span class="p-float-label mt-4">
+      <input
+        [style]="{ width: '100%' }"
+        formControlName="title"
+        pInputText
+        id="image"
+      />
+      <label for="image">Evenement titel:</label>
+    </span>
+  </div>
+  <div class="relative z-20 w-full mb-6 group">
+    <label for="category">Categorie:</label>
+    <p-dropdown
+      [style]="{ width: '100%', 'margin-bottom': '0.75rem' }"
+      [filter]="true"
+      formControlName="category"
+      [options]="categories"
+      optionLabel="name"
+      placeholder="Selecteer een categorie"
+    >
+    </p-dropdown>
+    <p-button
+      label="Voeg toe"
+      [type]="'button'"
+      icon="pi pi-plus"
+      iconPos="right"
+    ></p-button>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-6 group">
+      <span class="p-float-label mt-4">
+        <textarea
+          rows="5"
+          [style]="{ width: '100%' }"
+          pInputTextarea
+          formControlName="description"
+          [autoResize]="true"
+        ></textarea>
+        <label for="float-input">Beschrijving</label></span
+      >
+    </div>
+    <div class="relative z-0 w-full mb-6 group">
+      <!-- <upload-dropzone
+          #uploadDropzone
+          [uploader]="uploader"
+          [options]="options"
+          [onUpdate]="onUpdate"
+          [width]="width"
+          [height]="height"
+        >
+        </upload-dropzone> -->
+      <span class="p-float-label mt-4">
+        <input class="w-full" pInputText id="image" formControlName="image" />
+        <label for="image">Afbeelding URL...</label>
+      </span>
+    </div>
+    <div class="flex items-center pl-4 border border-gray-200 rounded">
+      <p-inputSwitch formControlName="hasTime"></p-inputSwitch>
+      <label
+        for="bordered-checkbox-2"
+        class="w-full py-4 ml-2 text-sm font-medium text-gray-900"
+        >Met tijd?</label
+      >
+    </div>
+    <div>
+      @if (this.CreateEventForm.get('hasTime')?.value === true) {
+      <p-calendar
+        formControlName="date"
+        placeholder="Start tot stop (Met tijd)"
+        selectionMode="range"
+        [readonlyInput]="true"
+        inputId="range"
+        [showTime]="true"
+      ></p-calendar
+      >} @else {
+      <p-calendar
+        formControlName="date"
+        placeholder="Start tot stop"
+        selectionMode="range"
+        [readonlyInput]="true"
+        inputId="range"
+      ></p-calendar>
+      }
+    </div>
+    <div class="flex items-center pl-4 border border-gray-200 rounded">
+      <p-inputSwitch formControlName="allowJoin"></p-inputSwitch>
+      <label
+        for="bordered-checkbox-2"
+        class="w-full py-4 ml-2 text-sm font-medium text-gray-900"
+        >Deelname toestaan?</label
+      >
+    </div>
+    <span class="p-float-label mt-4">
+      <input class="w-full" pInputText id="image" formControlName="location" />
+      <label for="image">Locatie...</label>
+    </span>
+  </div>
+
+  <button
+    pButton
+    [disabled]="!CreateEventForm.valid"
+    class="mt-2"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>

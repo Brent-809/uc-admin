@@ -1,0 +1,53 @@
+<nav class="sidebar-nav">
+  <ul id="sidebarnav">
+    <!-- First level menu -->
+    <li
+      class="sidebar-item"
+      [class.active]="showMenu === sidebarnavItem.title"
+      *ngFor="let sidebarnavItem of sidebarnavItems"
+      [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'"
+    >
+      <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true">
+        {{ sidebarnavItem.title }}
+      </div>
+      <a
+        class="sidebar-link waves-effect waves-dark"
+        [routerLink]="
+          sidebarnavItem.class === '' ? [sidebarnavItem.path] : null
+        "
+        [ngClass]="[sidebarnavItem.class]"
+        *ngIf="!sidebarnavItem.extralink"
+        (click)="addExpandClass(sidebarnavItem.title)"
+        [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'"
+      >
+        <i [ngClass]="[sidebarnavItem.icon]"></i>
+        <span class="hide-menu">{{ sidebarnavItem.title }}</span>
+      </a>
+    </li>
+    <li
+      class="sidebar-item ml-2"
+    >
+      <a
+        class="sidebar-link waves-effect waves-dark cursor-pointer font-bold"
+        
+        (click)="logout()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+          />
+        </svg>
+        <span class="hide-menu">Logout</span>
+      </a>
+    </li>
+  </ul>
+</nav>
